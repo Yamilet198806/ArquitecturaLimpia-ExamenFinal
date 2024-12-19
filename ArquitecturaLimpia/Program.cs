@@ -15,7 +15,7 @@ opciones.UseSqlServer(configuracion.GetConnectionString("ConexionDB"));
 
 using (var contexto = new AppDbContext(opciones.Options))
 {
-    //Conexión a la Base de Datos
+   
     await contexto.Database.EnsureCreatedAsync();
 
     using (var unidadDeTrabajo = new UnidadDeTrabajo(contexto))
